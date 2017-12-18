@@ -47,8 +47,7 @@ enableRobotsTXT = true
     patreon = ""
 
 [Params.social]
-    gitlab = ""
-
+    facebook = "forkedriverarc"
 [Params.piwik]
     enable = true
     # URL to the root of the piwik installation.
