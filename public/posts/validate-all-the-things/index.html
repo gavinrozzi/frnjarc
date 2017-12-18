@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validate All The Things!</title>
+
+    
+    
+    
+    <link rel="preload" href="https://bluestnight.shadow53.com/styles.css" as="style" />
+
+    <link rel="dns-prefetch" href="https://maxcdn.bootstrapcdn.com/" />
+    <link rel="preconnect" href="https://maxcdn.bootstrapcdn.com/" />
+    <link rel="preload" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" as="style">
+
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com/" />
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.1.3/lunr.min.js" as="script" />
+    <link rel="preload" href="https://bluestnight.shadow53.com/js/search.min.js" as="script" />
+    <link rel="preload" href="https://bluestnight.shadow53.com/index.json" as="fetch" />
+    <meta name="description" itemprop="description" content="Last month, the Hugo developers released version 0.30 of Hugo. The big-ticket items mentioned in the release notes were the new fast render mode, improvements to template metrics, and improvements to the built-in syntax highlighting. Another feature added, that was left underneath the release announcement, was the addition of the errorf template function. It seems like a small thing, but has huge implications: it means that theme developers can now safely tell users that they&amp;rsquo;ve misconfigured their theme!" id="desc"><meta name="generator" content="Hugo 0.31.1" /><meta name="keywords" itemprop="keywords" content="releases,bug fixes,features" id="keywords"><link rel="canonical" href="https://bluestnight.shadow53.com/posts/validate-all-the-things/">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    
+  <link rel="stylesheet" type="text/css" href="https://bluestnight.shadow53.com/css/dark.css"><link rel="stylesheet" type="text/css" href="https://bluestnight.shadow53.com/styles.css">
+
+    <script>var _paq = undefined;</script></head>
+  <body itemscope itemtype="http://schema.org/WebPage">
+    <div id="site-container">
+      <div id="site-header">
+        <header class="small-text-center medium-text-left row">
+          <img id="site-thumbnail" class="row-item" src="https://bluestnight.shadow53.com/images/thumbnail.png">
+          <a class="row-item" href="https://bluestnight.shadow53.com">
+            <span id="site-title" itemprop="name">Forked River Amateur Radio Club</span>
+            <br/><span id="site-tagline">Serving the Forked River, NJ Amateur Radio Community</span>
+          </a>
+        </header>
+        <label for="menu-toggle-box"><div id="menu-toggle" class="main-nav no-select"><span><span class="fa fa-bars"></span> MENU</span></div></label>
+        <input type="checkbox" id="menu-toggle-box" class="hide"/>
+        <nav id="main-nav">
+          <ul class="menu"><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-home" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="https://bluestnight.shadow53.com/" >
+      <span>HOME</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-documentation" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="https://bluestnight.shadow53.com/docs/" >
+      <span>DOCUMENTATION</span><label for="nav-documentation">
+        &nbsp;&nbsp;<span class="nav-arrow">&#9656;</span>
+      </label></a><ul>
+    <li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-example-configs" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="https://bluestnight.shadow53.com/docs/example-configs/" >
+      <span>EXAMPLE CONFIGS</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-pages" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="https://bluestnight.shadow53.com/docs/pages/" >
+      <span>PAGES</span><label for="nav-pages">
+        &nbsp;&nbsp;<span class="nav-arrow">&#9656;</span>
+      </label></a><ul>
+    <li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-alert" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="https://bluestnight.shadow53.com/docs/site/alert/#page-specific-alerts" >
+      <span>ALERT</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-authorbox" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="https://bluestnight.shadow53.com/docs/pages/authorbox/" >
+      <span>AUTHORBOX</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-comments" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="https://bluestnight.shadow53.com/docs/pages/comments/" >
+      <span>COMMENTS</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-customize-list-pages" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="https://bluestnight.shadow53.com/docs/pages/custom-list-pages/" >
+      <span>CUSTOMIZE LIST PAGES</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-page-navigation" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="https://bluestnight.shadow53.com/docs/pages/next-prev-page/" >
+      <span>PAGE NAVIGATION</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-summaries" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="https://bluestnight.shadow53.com/docs/pages/summaries/" >
+      <span>SUMMARIES</span></a></li>
+    </ul></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-shortcodes" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="https://bluestnight.shadow53.com/docs/shortcodes/" >
+      <span>SHORTCODES</span><label for="nav-shortcodes">
+        &nbsp;&nbsp;<span class="nav-arrow">&#9656;</span>
+      </label></a><ul>
+    <li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-alert" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="https://bluestnight.shadow53.com/docs/site/alert/#shortcode" >
+      <span>ALERT</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-custom-fonts" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="https://bluestnight.shadow53.com/docs/shortcodes/custom-fonts/" >
+      <span>CUSTOM FONTS</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-members" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="https://bluestnight.shadow53.com/docs/shortcodes/members/" >
+      <span>MEMBERS</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-netlify-forms" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="https://bluestnight.shadow53.com/docs/shortcodes/netlify-forms/" >
+      <span>NETLIFY FORMS</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-responsive-tables" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="https://bluestnight.shadow53.com/docs/shortcodes/responsive-tables/" >
+      <span>RESPONSIVE TABLES</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-link-to-static-files" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="https://bluestnight.shadow53.com/docs/shortcodes/static/" >
+      <span>LINK TO STATIC FILES</span></a></li>
+    </ul></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-sidebar" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="https://bluestnight.shadow53.com/docs/sidebar/" >
+      <span>SIDEBAR</span><label for="nav-sidebar">
+        &nbsp;&nbsp;<span class="nav-arrow">&#9656;</span>
+      </label></a><ul>
+    <li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-category-list" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="https://bluestnight.shadow53.com/docs/sidebar/category-list/" >
+      <span>CATEGORY LIST</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-events" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="https://bluestnight.shadow53.com/docs/sidebar/events/" >
+      <span>EVENTS</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-patreon-banner" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="https://bluestnight.shadow53.com/docs/sidebar/patreon-banner/" >
+      <span>PATREON BANNER</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-recent-posts" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="https://bluestnight.shadow53.com/docs/sidebar/recent-posts/" >
+      <span>RECENT POSTS</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-search" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="https://bluestnight.shadow53.com/docs/sidebar/search/" >
+      <span>SEARCH</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-tag-list" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="https://bluestnight.shadow53.com/docs/sidebar/tag-list/" >
+      <span>TAG LIST</span></a></li>
+    </ul></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-site" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="https://bluestnight.shadow53.com/docs/site/" >
+      <span>SITE</span><label for="nav-site">
+        &nbsp;&nbsp;<span class="nav-arrow">&#9656;</span>
+      </label></a><ul>
+    <li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-alert" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="https://bluestnight.shadow53.com/docs/site/alert/" >
+      <span>ALERT</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-analytics" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="https://bluestnight.shadow53.com/docs/site/analytics/" >
+      <span>ANALYTICS</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-appearance" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="https://bluestnight.shadow53.com/docs/site/appearance/" >
+      <span>APPEARANCE</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-policies" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="https://bluestnight.shadow53.com/docs/site/policies/" >
+      <span>POLICIES</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-social-icons" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="https://bluestnight.shadow53.com/docs/site/social-icons/" >
+      <span>SOCIAL ICONS</span></a></li>
+    </ul></li>
+    </ul></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-survey" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="https://bluestnight.shadow53.com/survey/" >
+      <span>SURVEY</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-about" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="https://bluestnight.shadow53.com/about/" >
+      <span>ABOUT</span></a></li></ul>
+        </nav>
+        </div>
+      <div id="main-container" class="row" role="main" itemprop="mainContentOfPage">
+        
+        
+        
+<main class="row-item small-full medium-two-thirds" itemscope itemtype="http://schema.org/Blog">
+  <article id="post-article" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" itemref="keywords desc">
+    <header id="page-header">
+      <h1 itemprop="headline">Validate All The Things!</h1><p id="post-metadata" class="row"><span class="row-item">
+          <span class="fa fa-clock-o"></span>
+          <strong>Published:</strong>
+          <time datetime="2017-11-13" content="2017-11-13" itemprop="datePublished">November 13, 2017</time>
+        </span><span class="row-item">
+          <span class="fa fa-folder"></span>
+          <a href="https://bluestnight.shadow53.com/categories/announcements" rel="category">Announcements</a>
+        </span><span class="row-item"><span class="fa fa-book"></span> <strong>Estimated reading time:</strong> ~<span itemprop="timeRequired">3 minutes</span></span></p>
+      
+    </header>
+    
+    <div id="post-content">
+      <span itemprop="articleBody">
+
+<p>Last month, the Hugo developers released version <a href="https://github.com/gohugoio/hugo/releases/tag/v0.30">0.30</a> of Hugo. The big-ticket items mentioned in the release notes were the new fast render mode, improvements to template metrics, and improvements to the built-in syntax highlighting.</p>
+
+<p>Another feature added, that was left underneath the release announcement, was the addition of the <a href="https://gohugo.io/functions/errorf/"><code>errorf</code></a> template function. It seems like a small thing, but has huge implications: it means that theme developers can now safely tell users that they&rsquo;ve misconfigured their theme!</p>
+
+<!-- more -->
+
+<p>This is the bulk of the work I&rsquo;ve put into BluestNight over the past weeks. Every theme file was carefully looked over for places where user configuration is used and where those configuration options can be validated.</p>
+
+<h1 id="example-validating-colors">Example: Validating Colors</h1>
+
+<p>For instance, if you are using a <a href="https://bluestnight.shadow53.com/docs/site/appearance/#custom-colors">custom color scheme</a>, each of the following is a valid CSS color:</p>
+
+<ul>
+<li><code>#babb1e</code> (Hexadecimal)</li>
+<li><code>#112233FF</code> (Hexadecimal with alpha)</li>
+<li><code>rgb(233, 45, 79)</code> (RGB color)</li>
+<li><code>rgba(233, 45, 79, 0.4)</code> (RGBA color)</li>
+<li><code>rgba(50%, 33%, 12%, 95%)</code> (RGBA color, using percent values)</li>
+<li><code>blanchedalmond</code> (CSS color keyword, equal to <code>rgb(255, 235, 205)</code>)</li>
+</ul>
+
+<p>If you use any of these formats to specify a CSS color, BluestNight is able to validate that it is written correctly and give you an error if something is wrong:</p>
+
+<ul>
+<li><code>#1122334</code> (Missing a second digit for the alpha value)</li>
+<li><code>rgb(256, 123, 24)</code> (The <code>r</code> value is greater than <code>255</code>)</li>
+<li><code>rgba(255, 123, 24, 1.1)</code> (The alpha value is greater than <code>1</code>)</li>
+</ul>
+
+<h1 id="other-examples">Other Examples</h1>
+
+<p>One of the other big areas that I wanted to improve on was in the area of options that required other options to be set a certain way. For instance, in order to use site search, the option <code>Params.widgets.search</code> needs to be set to <code>true</code>, but you also need to add <code>&quot;JSON&quot;</code> as an output format for the home page in order to generate the search index file.</p>
+
+<p>Previously, you could set <code>Params.widgets.search</code> to <code>true</code> and have the search bar enabled but not work because the index was never created. Now, Hugo will warn you to enable the JSON output format too. This change also effects any other option that requires other options to be set a certain way in order to work.</p>
+
+<h1 id="social-icons-in-member-boxes">Social Icons in Member Boxes</h1>
+
+<p>One feature that was added during this process is the ability to add <a href="https://bluestnight.shadow53.com/docs/shortcodes/members/#social-links">social icons</a> for a particular site member, which will appear on their member/authorboxes. The syntax is the same as the site&rsquo;s social icons. For example, my data file on this site currently looks like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">Name     : Michael Bryant
+Img      : images/avatar.jpg
+Position : <span style="color:#e6db74">&#34;Creator&#34;</span>
+Url      : <span style="color:#e6db74">&#34;https://shadow53.com/&#34;</span>
+Bio      : <span style="color:#e6db74">|
+</span><span style="color:#e6db74">   A college student at Seattle Pacific University.
+</span><span style="color:#e6db74">   Programmer and blogger on the side. Author of BluestNight.</span>
+social   :
+   linkedin: <span style="color:#e6db74">&#34;shadow53&#34;</span>
+   gitlab: <span style="color:#e6db74">&#34;Shadow53&#34;</span>
+   github: <span style="color:#e6db74">&#34;Shadow53&#34;</span></code></pre></div>
+<p>You can see the result of adding the social icons in the authorbox at the end of this post.</p>
+
+<h1 id="miscellaneous-changes">Miscellaneous Changes</h1>
+
+<ul>
+<li><a href="https://gitlab.com/BluestNight/BluestNight/commit/2dd4d73a73384994fe53dcff7457dac904630330">[2dd4d73a]</a> Remove unused template files</li>
+<li><a href="https://gitlab.com/BluestNight/BluestNight/commit/eaa1cb96bf3bb942642b3bc57629743a92e217f3">[eaa1cb96]</a> Remove float partial in favor of <code>float</code> template function</li>
+<li><a href="https://gitlab.com/BluestNight/BluestNight/commit/f93302d11e4c4eebf413e543bb2d1e235461247f">[f93302d1]</a> Fixed an accidental hardcoding of a value</li>
+<li><a href="https://gitlab.com/BluestNight/BluestNight/commit/e003dfe31d1e0d6cae2a972ae66c9ec2e0b78842">[e003dfe3]</a> Check if a value is inside a slice of allowed values instead of using nested <code>or</code> statements</li>
+<li>Various other changes relating to cleaning up the codebase.</li>
+</ul>
+</span>
+    </div><div id="post-tags">
+    	<ul class="menu">
+        <li class="row-item"><i class="fa fa-tags"></i>&nbsp;&nbsp;</li><li itemprop="relatedUrl" itemscope itemtype="http://schema.org/URL"><a class="row-item button" href="https://bluestnight.shadow53.com/tags/releases" rel="tag" itemprop="url">releases</a>
+    		</li><li itemprop="relatedUrl" itemscope itemtype="http://schema.org/URL"><a class="row-item button" href="https://bluestnight.shadow53.com/tags/bug-fixes" rel="tag" itemprop="url">bug fixes</a>
+    		</li><li itemprop="relatedUrl" itemscope itemtype="http://schema.org/URL"><a class="row-item button" href="https://bluestnight.shadow53.com/tags/features" rel="tag" itemprop="url">features</a>
+    		</li></ul>
+    </div><div id="authorbox" class="row vcenter memberbox" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <div class="row-item member-avatar" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+        <img alt="Gavin Rozzi avatar" src="https://bluestnight.shadow53.com/images/gavinrozzi.jpg" itemprop="contentUrl" />
+    </div>
+    <div class="row-item member-bio">
+      <div>
+        <span class="widget-title">About <span itemprop="name">Gavin Rozzi</span></span>
+      </div>
+      <p itemprop="description">A college student at Stockton University and political journalist. Gavin has been licensed as amateur radio station KD2CXZ since 2012</p>
+      <div class="social row">
+        
+
+
+
+
+
+<a href="https://github.com/gavinrozzi" class="row-item" itemprop="sameAs">
+  <span class="fa fa-github"></span>
+</a>
+
+
+
+<a href="https://linkedin.com/in/gavinrozzi" class="row-item" itemprop="sameAs">
+  <span class="fa fa-linkedin"></span>
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+
+  </div></article>
+
+  </main>
+
+        <aside class="row-item small-full medium-third right" itemscope itemtype="http://schema.org/WPSideBar">
+  
+  <div class="widget">
+	<header><span class="widget-header"><span class="fa fa-credit-card"></span> Support Us On</span>
+	</header>
+	<a href="https://patreon.com/shadow53"><img id="patreon-banner" src="https://bluestnight.shadow53.com/images/patreon/patreon_white.svg" alt="Patreon Banner" title="Support me on Patreon!" />
+  </a>
+</div>
+  <div class="widget" id="search-container">
+  <header>
+		<span class="widget-header"><span class="fa fa-search"></span> Search</span>
+	</header>
+	<input type="search" name="search" id="searchbox" placeholder="Search..." autocomplete="off"/>
+  <div id="search-results" class="hide"></div>
+</div>
+	<div class="widget">
+	
+		
+	
+	
+	<header>
+		<span class="widget-header"><span class="fa fa-pencil"></span> <a href="https://bluestnight.shadow53.com/posts/">Recent Posts</a></span>
+	</header>
+	
+			<a class="widget-header-small button" href="https://bluestnight.shadow53.com/index.xml"><span class="fa fa-rss"></span> Subscribe to the Site</a>
+		<a class="widget-header-small button" href="https://bluestnight.shadow53.com/posts/index.xml"><span class="fa fa-rss"></span> Subscribe to Posts</a><ul><li><a href="https://bluestnight.shadow53.com/posts/validate-all-the-things/">Validate All The Things!</a></li><li><a href="https://bluestnight.shadow53.com/posts/events-overhauled/">Events: Overhauled</a></li><li><a href="https://bluestnight.shadow53.com/posts/easy-privacy-policy-optimizations/">Easy Privacy Policies And Optimizations</a></li><li><a href="https://bluestnight.shadow53.com/posts/all-grown-up/">BluestNight is All Grown Up!</a></li></ul>
+</div>
+  
+	<div class="widget">
+	<header>
+		<span class="widget-header"><span class="fa fa-folder"></span> <a href="https://bluestnight.shadow53.com/categories/">Categories</a></span>
+	</header>
+	<ul><li><a href="https://bluestnight.shadow53.com/categories/documentation">Documentation</a></li>
+		<li><a href="https://bluestnight.shadow53.com/categories/announcements">Announcements</a></li>
+		
+	</ul>
+</div>
+	<div class="widget">
+	<header>
+		<span class="widget-header"><span class="fa fa-tags"></span> <a href="https://bluestnight.shadow53.com/tags/">Tags</a></span>
+	</header>
+	<div><a class="button" href="https://bluestnight.shadow53.com/tags/bug-fixes" title="bug fixes">
+				bug fixes (4)
+			</a><a class="button" href="https://bluestnight.shadow53.com/tags/features" title="features">
+				features (4)
+			</a><a class="button" href="https://bluestnight.shadow53.com/tags/releases" title="releases">
+				releases (4)
+			</a><a class="button" href="https://bluestnight.shadow53.com/tags/events" title="events">
+				events (1)
+			</a><a class="button" href="https://bluestnight.shadow53.com/tags/fonts" title="fonts">
+				fonts (1)
+			</a><a class="button" href="https://bluestnight.shadow53.com/tags/iubenda" title="iubenda">
+				iubenda (1)
+			</a></div>
+</div>
+</aside>
+
+      </div>
+      <footer class="row">
+        <div class="small-full medium-half small-text-center medium-text-left medium-left row">
+          <div class="small-full">
+            <small>
+              &copy; 2017
+              <span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+                <span itemprop="name">Forked River Amateur Radio Club</span>
+              </span>
+            </small>
+          </div>
+          <div class="small-full row">
+            
+            
+            <div class="row-item small-only-full">
+              
+                
+                <small>
+                  <a href="https://bluestnight.shadow53.com/privacy-policy/">Privacy Policy</a>
+                </small>
+                
+              
+            </div>
+            
+            
+          </div>
+        </div>
+        
+        <div id="social-icons" class="row small-full medium-half small-text-center medium-text-right" style="align-self: center;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+      </footer>
+    </div><script class="_iub_cs_activate" type="text/plain" src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.1.3/lunr.min.js"></script>
+    
+    <script src="https://bluestnight.shadow53.com/js/search.min.js" class="_iub_cs_activate" type="text/plain"></script>
+    
+    <script class="_iub_cs_activate-inline" type="text/plain">
+      var lunrIndex = undefined;
+      loadIndex("https://bluestnight.shadow53.com/index.json").then(
+        function(index) { lunrIndex = index; },
+        function(status){}
+      );
+    </script><script type="text/javascript">
+      var _iub = _iub || [];
+      _iub.csConfiguration = {
+        cookiePolicyId: "8219381",
+        siteId: "908104",
+        lang: "en",
+        consentOnScroll: true,
+        banner: {
+          slideDown: false,
+          applyStyles: false,
+          content: "<p>This website or its third party tools use cookies, which are necessary to its functioning and required to achieve the purposes illustrated in the %{cookie_policy_link}. If you want to know more or withdraw your consent to all or some of the cookies, please refer to the cookie policy. By closing this banner, scrolling this page, clicking a link, or continuing to browse otherwise, you agree to the use of cookies.</p>"
+        }
+      };
+    </script>
+    <script type="text/javascript" src="https://cdn.iubenda.com/cookie_solution/iubenda_cs/core-6f17ecca6b9b620e0bbb837c5c1409ab.js" charset="UTF-8" async></script>
+    
+      <script type="text/javascript" src="https://bluestnight.shadow53.com/js/thumbnail.min.js"></script>
+      </body>
+</html>
