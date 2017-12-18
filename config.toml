@@ -1,4 +1,4 @@
-baseurl = "http://localhost:1313/"
+baseurl = "https://frnjarc.org/"
 title = "Forked River Amateur Radio Club"
 author = "Gavin Rozzi"
 paginate = 10
@@ -59,18 +59,3 @@ enableRobotsTXT = true
     track_nojs = true
     # Include a link in the site footer to allow users to opt out of analytics
     enable_optout = false
-
-
-[menu]
-  [[menu.main]]
-    name = "Alert"
-    weight = 1
-    parent = "docs-pages"
-    identifier = "alert-for-pages"
-    url = "docs/site/alert/#page-specific-alerts"
-  [[menu.main]]
-    name = "Alert"
-    weight = 1
-    parent = "docs-shortcodes"
-    identifier = "alert-shortcode"
-    url = "docs/site/alert/#shortcode"

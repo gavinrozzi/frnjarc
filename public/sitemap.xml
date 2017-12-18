@@ -3,147 +3,85 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://frnjarc.org/about/</loc>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://frnjarc.org/posts/testpost/</loc>
+    <lastmod>2017-09-10T10:26:15-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://frnjarc.org/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/docs/site/alert/</loc>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/docs/site/analytics/</loc>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/docs/site/appearance/</loc>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://frnjarc.org/categories/announcements/</loc>
+    <lastmod>2017-09-10T10:26:15-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/docs/sidebar/category-list/</loc>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/docs/pages/frequencies/</loc>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/docs/shortcodes/custom-fonts/</loc>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/docs/pages/custom-list-pages/</loc>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/categories/documentation/</loc>
+    <loc>https://frnjarc.org/tags/bug-fixes/</loc>
+    <lastmod>2017-09-10T10:26:15-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/docs/</loc>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/events/</loc>
+    <loc>https://frnjarc.org/categories/</loc>
+    <lastmod>2017-09-10T10:26:15-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/docs/sidebar/events/</loc>
+    <loc>https://frnjarc.org/frequencies/</loc>
   </url>
   
   <url>
-    <loc>http://localhost:1313/docs/example-configs/</loc>
+    <loc>https://frnjarc.org/categories/documentation/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/docs/pages/facebook/</loc>
+    <loc>https://frnjarc.org/events/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/events/some-event/</loc>
+    <loc>https://frnjarc.org/facebook/</loc>
   </url>
   
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://frnjarc.org/tags/features/</loc>
+    <lastmod>2017-09-10T10:26:15-07:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/docs/shortcodes/static/</loc>
+    <loc>https://frnjarc.org/events/some-event/</loc>
   </url>
   
   <url>
-    <loc>http://localhost:1313/docs/shortcodes/members/</loc>
+    <loc>https://frnjarc.org/</loc>
+    <lastmod>2017-09-10T10:26:15-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/docs/shortcodes/netlify-forms/</loc>
+    <loc>https://frnjarc.org/posts/</loc>
+    <lastmod>2017-09-10T10:26:15-07:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/docs/pages/next-prev-page/</loc>
+    <loc>https://frnjarc.org/tags/releases/</loc>
+    <lastmod>2017-09-10T10:26:15-07:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/docs/pages/</loc>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/docs/sidebar/patreon-banner/</loc>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/docs/site/policies/</loc>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/docs/sidebar/recent-posts/</loc>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/docs/shortcodes/responsive-tables/</loc>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/docs/sidebar/search/</loc>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/docs/shortcodes/</loc>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/docs/sidebar/</loc>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/docs/site/</loc>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/docs/site/social-icons/</loc>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/docs/pages/summaries/</loc>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/docs/sidebar/tag-list/</loc>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://frnjarc.org/tags/</loc>
+    <lastmod>2017-09-10T10:26:15-07:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -1,5 +1,5 @@
 +++
-title = "Welcome"
+title = "Forked River Amateur Radio Club"
 linktitle = "Home"
 alert = "Main Club frequency: 146.500 MHz FM simplex, CSQ."
 hide_list = true
