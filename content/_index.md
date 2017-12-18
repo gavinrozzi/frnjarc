@@ -1,18 +1,22 @@
 +++
-title = "Welcome to BluestNight!"
+title = "Welcome"
 linktitle = "Home"
-#hide_list = true
+alert = "Main Club frequency: 146.500 MHz FM simplex, CSQ."
+hide_list = true
 [menu.main]
   weight = 1
   identifier = "home"
 +++
 
-BluestNight is a powerful and featureful theme made for [Hugo](https://gohugo.io), the static site builder. Written from scratch, it was made with these goals in mind:
+The Forked River Amateur Radio Club (FRARC) is a nonprofit group of individuals dedicated to improving the art and science of amateur radio in the greater Forked River, New Jersey area.
 
-- Look clean, organized, and professional
-- Provide users with customizations to make the site fit their needs
-- Optimize the generated website to load quickly and, as much as possible, help* it achieve a score of "Good" on Google's [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/).
+Our mission:
+
+- Engage & support the amateur radio community in our area
+- Provide disaster-resilient emergency communications infrastructure
+- Train members to maximize their ability to communicate in emergency situations, such as severe weather
+- Educate members on the latest in amateur radio technology and digital systems
 
 <small>
-* As a theme, BluestNight can only do so much to help improve a page's loading speed. It is on the site author to optimize their server configurations and any images used in the site to further improve loading times.
+* Club members are not required to hold a current FCC amateur radio license or callsign, however it is strongly recommended that you obtain one in order to fully participate in all club exercises and activities. The Forked River Amateur Radio Club does not currently provide VE exams or test preparation.
 </small>

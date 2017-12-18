@@ -1,4 +1,4 @@
-baseurl = "https://frnjarc.netlify.com"
+baseurl = "http://localhost:1313/"
 title = "Forked River Amateur Radio Club"
 author = "Gavin Rozzi"
 paginate = 10
@@ -12,7 +12,7 @@ enableRobotsTXT = true
     section = ["HTML", "RSS"]
 
 [Params]
-    tagline = "Serving the Forked River, NJ Amateur Radio Community"
+    tagline = "Serving the amateur radio community of Lacey Township, NJ"
     description = "The official website of the Forked River Amateur Radio Club" # Description of your site
     authorbox = true
     author = "Gavin Rozzi"
@@ -20,34 +20,47 @@ enableRobotsTXT = true
     thumbnail = "images/thumbnail.png"
     thumbnail_radius = "10%"
 
-[Params.iubenda]
-    id = "8219381"
-    legal_only = false
+#[Params.iubenda]
+    #id = ""
+    #legal_only = false
 
-[Params.iubenda.pro]
-    enable_pro = true
-    site_id = "908104"
-    enable_cookie_policy = true
-    disable_footer_link = true
-    prior_consent = true
+#[Params.iubenda.pro]
+    #enable_pro = false
+    #site_id = ""
+    #enable_cookie_policy = false
+    #disable_footer_link = true
+    #prior_consent = false
 
 [Params.background]
-    src = "images/background_lg.png"
+    src = "images/background_lg.jpg"
     medium_src = "images/background_med.png"
     small_src = "images/background_sm.png"
     fit_width = false
     tile = false
 
 [Params.widgets]
-    search = true
+    search = false
     recent_articles = true
     categories = true
-    tags = true
-    tags_counter = true
+    tags = false
+    tags_counter = false
     patreon = ""
 
 [Params.social]
     gitlab = ""
+
+[Params.piwik]
+    enable = true
+    # URL to the root of the piwik installation.
+    # Can include paths after the TLD (e.g https://example.com/piwik/)
+    host = "https://analytics.gavinrozzi.com"
+    # ID number of this site. Defaults to 1 if not included
+    site_id = 12
+    # Include <noscript> tags to track users with javascript disabled
+    track_nojs = true
+    # Include a link in the site footer to allow users to opt out of analytics
+    enable_optout = false
+
 
 [menu]
   [[menu.main]]

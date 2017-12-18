@@ -2,14 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Docs: Sidebar on Forked River Amateur Radio Club</title>
-    <link>https://frnjarc.netlify.com/docs/sidebar/</link>
+    <link>http://localhost:1313/docs/sidebar/</link>
     <description>Recent content in Docs: Sidebar on Forked River Amateur Radio Club</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="https://frnjarc.netlify.com/docs/sidebar/" rel="self" type="application/rss+xml" />
-    
-    
-    
-    
+    <atom:link href="http://localhost:1313/docs/sidebar/" rel="self" type="application/rss+xml" />
     
     
     
