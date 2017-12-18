@@ -73,12 +73,6 @@
     <input type="checkbox" id="nav-alert" class="hide"/>
     <a class="main-nav button" tabindex="0" href="http://localhost:1313/docs/site/alert/#page-specific-alerts" >
       <span>ALERT</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <input type="checkbox" id="nav-authorbox" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="http://localhost:1313/docs/pages/authorbox/" >
-      <span>AUTHORBOX</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
-    <input type="checkbox" id="nav-comments" class="hide"/>
-    <a class="main-nav button" tabindex="0" href="http://localhost:1313/docs/pages/comments/" >
-      <span>COMMENTS</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
     <input type="checkbox" id="nav-customize-list-pages" class="hide"/>
     <a class="main-nav button" tabindex="0" href="http://localhost:1313/docs/pages/custom-list-pages/" >
       <span>CUSTOMIZE LIST PAGES</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
@@ -162,6 +156,12 @@
       <span>SOCIAL ICONS</span></a></li>
     </ul></li>
     </ul></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-club-frequencies" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="http://localhost:1313/docs/pages/frequencies/" >
+      <span>CLUB FREQUENCIES</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <input type="checkbox" id="nav-facebook-page" class="hide"/>
+    <a class="main-nav button" tabindex="0" href="http://localhost:1313/docs/pages/facebook/" >
+      <span>FACEBOOK PAGE</span></a></li><li class="no-select" itemscope itemtype="http://schema.org/SiteNavigationElement">
     <input type="checkbox" id="nav-about" class="hide"/>
     <a class="main-nav button" tabindex="0" href="http://localhost:1313/about/" >
       <span>ABOUT</span></a></li></ul>
@@ -205,16 +205,6 @@
 </article>
 <article itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting"><div>
     <header class="post-list-title">
-      <a href="http://localhost:1313/docs/pages/authorbox/">
-        <h2 itemprop="headline">Authorbox</h2>
-      </a></header>
-    <div class="post-list-summary" itemprop="description">
-      <p>Use the authorbox to provide attribution to the author of a post or page. The authorbox feature is based on the member shortcode and requires the same setup in order to work. Note: if the URL key is set in the author’s data file, the &lt;a&gt; tag linking to the URL will have the rel=&#34;author&#34; attribute set on it.  <a href="http://localhost:1313/docs/pages/authorbox/">[Read more...]</a></p>
-    </div>
-  </div>
-</article>
-<article itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting"><div>
-    <header class="post-list-title">
       <a href="http://localhost:1313/docs/sidebar/category-list/">
         <h2 itemprop="headline">Category List</h2>
       </a></header>
@@ -225,11 +215,11 @@
 </article>
 <article itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting"><div>
     <header class="post-list-title">
-      <a href="http://localhost:1313/docs/pages/comments/">
-        <h2 itemprop="headline">Comments</h2>
+      <a href="http://localhost:1313/docs/pages/frequencies/">
+        <h2 itemprop="headline">Club Frequencies</h2>
       </a></header>
     <div class="post-list-summary" itemprop="description">
-      <p>BluestNight currently supports two comment providers: HashOver, a self-hosted provider using PHP Muut, a third-party service using only JavaScript This page details options that apply regardless of which service you are using.  <a href="http://localhost:1313/docs/pages/comments/">[Read more...]</a></p>
+      <p>The Forked River Amateur Radio Club makes use of several frequencies to communicate over amateur radio. Please program your radios with the frequencies listed in this table if you wish to communicate with our members and participate in club activities. The Club may also utilize other public repeaters or traditional calling frequencies at our discretion. Table of Frequencies: Frequency (MHz)Channel NameCTCSS / DCSBand 146.500 VHF Simplex 1 CSQ 2m TBD FRARC Repeater 1 CSQ 70cm </p>
     </div>
   </div>
 </article>
@@ -273,6 +263,16 @@
     </div>
   </div>
 </article>
+<article itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting"><div>
+    <header class="post-list-title">
+      <a href="http://localhost:1313/docs/shortcodes/static/">
+        <h2 itemprop="headline">Link To Static Files</h2>
+      </a></header>
+    <div class="post-list-summary" itemprop="description">
+      <p>There&#39;s a limitation with the way links are created in markdown. Sites whose BaseURL is in a subdirectory of a site (i.e. https://example.com/subdir/) may not link correctly using existing methods. This shortcode helps circumvent this limitation. <a href="http://localhost:1313/docs/shortcodes/static/">[Read more...]</a></p>
+    </div>
+  </div>
+</article>
 <ul class="menu">
   <li class="disabled"> <span class="fa fa-chevron-circle-left"></span> Previous</li>
   <li class="pagination disabled">1</li>
@@ -298,6 +298,7 @@
 		<span class="widget-header"><span class="fa fa-folder"></span> <a href="http://localhost:1313/categories/">Categories</a></span>
 	</header>
 	<ul><li><a href="http://localhost:1313/categories/documentation">Documentation</a></li>
+		<li><a href="http://localhost:1313/categories/"></a></li>
 		
 	</ul>
 </div>
