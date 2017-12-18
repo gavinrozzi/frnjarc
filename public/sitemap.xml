@@ -44,11 +44,6 @@
   </url>
   
   <url>
-    <loc>https://frnjarc.org/events/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://frnjarc.org/facebook/</loc>
   </url>
   
@@ -56,10 +51,6 @@
     <loc>https://frnjarc.org/tags/features/</loc>
     <lastmod>2017-09-10T10:26:15-07:00</lastmod>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://frnjarc.org/events/some-event/</loc>
   </url>
   
   <url>
