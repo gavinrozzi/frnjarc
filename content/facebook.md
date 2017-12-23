@@ -2,7 +2,7 @@
 title = "Facebook Page"
 hide_authorbox = true
 disable_comments = true
-enable_toc = true
+enable_toc = false
 categories = [""]
 [menu.main]
   weight = 4
