@@ -1,11 +1,11 @@
 +++
 title = "DMR Repeater Project"
 hide_authorbox = true
-disable_comments = false
+disable_comments = true
 enable_toc = true
-categories = ["DMR"]
+categories = [""]
 [menu.main]
-  weight = 3
+  weight = 4
   parent = ""
 +++
 

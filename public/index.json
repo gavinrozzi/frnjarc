@@ -17,7 +17,7 @@
   "name": "DMR Repeater Project",
   "description": "The Forked River Amateur Radio Club plans on building out our own DMR repeater. We have registered the callsign KA2DMR for this repeater. We have a site in Forked River available for the repeater and are in the process of obtaining the parts.This is going to be a homebrew repeater constructed using two Motorola Maxtrac radios and an MMDVM to provide the digital voice capabilities.This project is being headed up by KD2CXZ and KB2UNK.",
   "body": "The Forked River Amateur Radio Club plans on building out our own DMR repeater. We have registered the callsign KA2DMR for this repeater. We have a site in Forked River available for the repeater and are in the process of obtaining the parts.This is going to be a homebrew repeater constructed using two Motorola Maxtrac radios and an MMDVM to provide the digital voice capabilities.This project is being headed up by KD2CXZ and KB2UNK.",
-  "url": "https://frnjarc.org/dmrrepeater/"
+  "url": "https://frnjarc.org/dmr/"
 },{
   "name": "Facebook Page",
   "description": " (function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = &#39;https://connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.11&amp;appId=367090096784329&#39;; fjs.parentNode.insertBefore(js, fjs); }(document, &#39;script&#39;, &#39;facebook-jssdk&#39;)); Forked River Amateur Radio Club ",
