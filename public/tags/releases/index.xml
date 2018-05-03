@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Forked River Amateur Radio Club</title>
-    <link>https://frnjarc.org/</link>
-    <description>Recent content on Forked River Amateur Radio Club</description>
+    <title>Releases on Forked River Amateur Radio Club</title>
+    <link>https://frnjarc.org/tags/releases/</link>
+    <description>Recent content in Releases on Forked River Amateur Radio Club</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 10 Sep 2017 10:26:15 -0700</lastBuildDate>
-    <atom:link href="https://frnjarc.org/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://frnjarc.org/tags/releases/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,15 +18,6 @@
       <guid>https://frnjarc.org/posts/testpost/</guid>
       <description>This is a test post</description>
     </item>
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
   </channel>
 </rss>

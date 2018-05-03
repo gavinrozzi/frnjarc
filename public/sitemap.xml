@@ -39,6 +39,15 @@
   </url>
   
   <url>
+    <loc>https://frnjarc.org/dmrrepeater/</loc>
+  </url>
+  
+  <url>
+    <loc>https://frnjarc.org/categories/dmr/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://frnjarc.org/categories/documentation/</loc>
     <priority>0</priority>
   </url>
