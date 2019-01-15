@@ -6,7 +6,7 @@
   publish = "public"
   command = "if [ -d themes ]; then rm -r themes; fi && git clone https://gitlab.com/BluestNight/BluestNight.git themes/BluestNight && hugo"
   [build.environment]
-    HUGO_VERSION = "0.31"
+    HUGO_VERSION = "0.53"
 
 # Production context: All deploys to the main
 # repository branch will inherit these settings.
